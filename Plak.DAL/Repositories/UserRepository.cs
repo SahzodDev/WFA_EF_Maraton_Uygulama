@@ -18,12 +18,12 @@ namespace Plak.DAL.Repositories
 
         public User GetUserByUsername(string username)
         {
-            return dbContext.Users.FirstOrDefault(u => u.Username == username);
+            return dbContext.Users.FirstOrDefault(u => u.Username == username && u.Status != Domain.Enums.Status.Deleted);
         }
 
         public User GetUserById(int id) 
         {
-            return dbContext.Users.FirstOrDefault(u => u.Id == id);
+            return dbContext.Users.FirstOrDefault(u => u.Id == id && u.Status != Domain.Enums.Status.Deleted);
         }
 
         public void Add(User user) 
@@ -56,7 +56,7 @@ namespace Plak.DAL.Repositories
 
         public List<User> GetAllUsers() 
         {
-            return dbContext.Users.ToList();
+            return dbContext.Users.Where(x => x.Status != Domain.Enums.Status.Deleted).ToList();
         }
     }
 }
