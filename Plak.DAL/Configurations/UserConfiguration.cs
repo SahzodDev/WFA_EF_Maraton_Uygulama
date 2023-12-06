@@ -16,6 +16,7 @@ namespace Plak.DAL.Configurations
             builder.ToTable("Users");
             builder.Property<string>("Password").HasField("_hashedPassword");
             builder.Property<string>("Salt").HasField("_salt");
+            builder.HasIndex(a => a.Username).IsUnique();
         }
     }
 }
