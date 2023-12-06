@@ -58,5 +58,10 @@ namespace Plak.BLL.Services
         {
             return albumRepo.GetAllAlbums().OrderByDescending(x=>x.CreatedDate).Take(10).ToList();
         }
+
+        public Album GetByName()
+        {
+            
+        }
     }
 }

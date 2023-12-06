@@ -97,6 +97,40 @@ namespace Plak.UI
 
         }
 
-        
+        private void btnAlbumKaydet_Click(object sender, EventArgs e)
+        {
+            Album album = new Album()
+            {
+                AlbumName = txtAd.Text,
+                ReleaseDate = dtpYayinTarihi.Value,
+                Price = numUcret.Value,
+                Discount = numIndirim.Value
+
+            };
+
+            albumService.Add(album);
+
+        }
+
+        private void btnAlbumSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek istediğinizden emin misiniz?", "Onay mesajı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Album selectedAlbum = dgvAlbumler.SelectedRows[0].DataBoundItem as Album;
+                if (selectedAlbum != null)
+                {
+                    var secilenAlbum=
+                }
+
+            }
+
+        }
+
+        private void btnYeniAlbum_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
