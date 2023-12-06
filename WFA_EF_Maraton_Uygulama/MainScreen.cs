@@ -29,7 +29,29 @@ namespace Plak.UI
         {
 
             GetAllData();
-            
+
+            var satisdurdurulanlar = albumService.GetAlbumsWhereSalesStopped();
+            foreach (Album album in satisdurdurulanlar)
+            {
+                lbSatisDurduruldu.Items.Add(album);
+            }
+            var satisdevamedenler=albumService.GetAlbumsWhereSalesContinue();
+            foreach (Album album1 in satisdevamedenler)
+            {
+                lbSatisDevam.Items.Add(album1);
+            }
+            var soneklenenler = albumService.GetLatestTenAlbum();
+            foreach(Album album2 in soneklenenler)
+            {
+                lbEklenen10.Items.Add(album2);
+            }
+            var indirimliler=albumService.GetAlbumsOnDiscount();
+            foreach (Album album3 in indirimliler)
+            {
+                
+            }
+               
+
 
         }
 
