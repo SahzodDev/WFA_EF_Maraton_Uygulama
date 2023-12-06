@@ -30,6 +30,7 @@ namespace Plak.UI
         {
             try
             {
+                CheckBoxes();
                 if (service.CheckUsernameExists(txtBoxKullaniciKayit.Text))
                 {
                     throw new Exception("Kullanıcı zaten mevcut.");
@@ -58,6 +59,20 @@ namespace Plak.UI
             }
 
 
+        }
+
+        public void CheckBoxes()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is TextBox)
+                {
+                    if (c.Text == null || c.Text == string.Empty)
+                    {
+                        throw new Exception("Alanlar boş bırakılamaz.");
+                    }
+                }
+            }
         }
     }
 }
