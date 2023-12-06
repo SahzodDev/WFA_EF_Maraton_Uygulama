@@ -115,6 +115,8 @@ namespace Plak.UI
             Album album = albumService.GetAll().FirstOrDefault(x => x.AlbumName == txtAd.Text);
 
             albumService.DeleteByStatus(album.Id);
+
+            GetAllData();
         }
 
         private void btnAlbumKaydet_Click(object sender, EventArgs e)
