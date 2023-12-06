@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginScreen));
             txtSifre = new TextBox();
             txtKullaniciAdi = new TextBox();
             btnGirisYap = new Button();
@@ -54,17 +55,22 @@
             // 
             // btnGirisYap
             // 
-            btnGirisYap.Location = new Point(38, 190);
+            btnGirisYap.BackColor = SystemColors.ActiveCaptionText;
+            btnGirisYap.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGirisYap.ForeColor = SystemColors.ButtonHighlight;
+            btnGirisYap.Location = new Point(215, 190);
             btnGirisYap.Margin = new Padding(3, 4, 3, 4);
             btnGirisYap.Name = "btnGirisYap";
-            btnGirisYap.Size = new Size(311, 39);
+            btnGirisYap.Size = new Size(134, 39);
             btnGirisYap.TabIndex = 17;
             btnGirisYap.Text = "Giris Yap";
-            btnGirisYap.UseVisualStyleBackColor = true;
+            btnGirisYap.UseVisualStyleBackColor = false;
             // 
             // linklblKayitOl
             // 
             linklblKayitOl.AutoSize = true;
+            linklblKayitOl.BackColor = SystemColors.ActiveCaptionText;
+            linklblKayitOl.LinkColor = Color.Red;
             linklblKayitOl.Location = new Point(281, 254);
             linklblKayitOl.Name = "linklblKayitOl";
             linklblKayitOl.Size = new Size(61, 20);
@@ -75,6 +81,8 @@
             // lblSifre
             // 
             lblSifre.AutoSize = true;
+            lblSifre.BackColor = SystemColors.ActiveCaptionText;
+            lblSifre.ForeColor = SystemColors.ButtonHighlight;
             lblSifre.Location = new Point(38, 114);
             lblSifre.Name = "lblSifre";
             lblSifre.Size = new Size(42, 20);
@@ -84,6 +92,8 @@
             // lblKullaniciAdi
             // 
             lblKullaniciAdi.AutoSize = true;
+            lblKullaniciAdi.BackColor = SystemColors.ActiveCaptionText;
+            lblKullaniciAdi.ForeColor = SystemColors.ButtonHighlight;
             lblKullaniciAdi.Location = new Point(38, 40);
             lblKullaniciAdi.Name = "lblKullaniciAdi";
             lblKullaniciAdi.Size = new Size(99, 20);
@@ -94,6 +104,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(393, 344);
             Controls.Add(txtSifre);
             Controls.Add(txtKullaniciAdi);
