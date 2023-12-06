@@ -36,5 +36,10 @@ namespace Plak.BLL.Services
             return repository.GetAll();
         }
 
+        public Artist Get(int id)
+        {
+            return repository.GetById(id);
+        }
+
     }
 }
