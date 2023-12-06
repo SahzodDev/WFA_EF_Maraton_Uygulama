@@ -47,7 +47,7 @@ namespace Plak.DAL.Repositories
             dbContext.SaveChanges();
         }
 
-        public List <Album> GetAll()
+        public List <Album> GetAllAlbums()
         {
             return dbContext.Albums.ToList();
         }
