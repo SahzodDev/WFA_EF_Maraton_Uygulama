@@ -15,17 +15,21 @@ namespace Plak.UI
 {
     public partial class MainScreen : Form
     {
-        public MainScreen()
+        public MainScreen(User user)
         {
             InitializeComponent();
             albumService=new AlbumService();
             artistService=new ArtistService();
+            this.user = user;
         }
         AlbumService albumService;
         ArtistService artistService;
+        User user;
         private void MainScreen_Load(object sender, EventArgs e)
         {
-           
+
+            GetAllData();
+            
 
         }
 
@@ -37,8 +41,9 @@ namespace Plak.UI
             var albumler=albumService.GetAll();
             foreach (var album in albumler)
             {
-                dgvAlbumler.Rows.Add(album.AlbumName, album.ArtistID, album.ReleaseDate,album.Price,album.SalesState);
+                dgvAlbumler.Rows.Add(album.AlbumName, album.ArtistName, album.ReleaseDate,album.Price,album.SalesState);
             }
         }
+       
     }
 }
