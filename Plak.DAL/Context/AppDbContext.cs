@@ -16,7 +16,7 @@ namespace Plak.DAL.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source = DESKTOP-EVCENE1; Initial Catalog = DietDb31; User Id = sa; Password = Anyela123");
+            optionsBuilder.UseSqlServer(@"Data Source = DESKTOP-EVCENE1; Initial Catalog = PlakDb; User Id = sa; Password = Anyela123");
             //base.OnConfiguring(optionsBuilder);
         }
     }
