@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Plak.DAL.Configurations
 {
-    internal class AlbumConfiguration
+    public class AlbumConfiguration
     {
+       
     }
 }
