@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             cbDurum = new ComboBox();
             numUcret = new NumericUpDown();
             numIndirim = new NumericUpDown();
@@ -101,6 +102,8 @@
             // lblArtistGrup
             // 
             lblArtistGrup.AutoSize = true;
+            lblArtistGrup.BackColor = SystemColors.ActiveCaptionText;
+            lblArtistGrup.ForeColor = SystemColors.ButtonHighlight;
             lblArtistGrup.Location = new Point(380, 579);
             lblArtistGrup.Name = "lblArtistGrup";
             lblArtistGrup.Size = new Size(82, 20);
@@ -110,6 +113,8 @@
             // lblDurum
             // 
             lblDurum.AutoSize = true;
+            lblDurum.BackColor = SystemColors.ActiveCaptionText;
+            lblDurum.ForeColor = SystemColors.ButtonHighlight;
             lblDurum.Location = new Point(380, 539);
             lblDurum.Name = "lblDurum";
             lblDurum.Size = new Size(54, 20);
@@ -119,6 +124,8 @@
             // lblIndirim
             // 
             lblIndirim.AutoSize = true;
+            lblIndirim.BackColor = SystemColors.ActiveCaptionText;
+            lblIndirim.ForeColor = SystemColors.ButtonHighlight;
             lblIndirim.Location = new Point(378, 503);
             lblIndirim.Name = "lblIndirim";
             lblIndirim.Size = new Size(56, 20);
@@ -136,6 +143,8 @@
             // lblUcret
             // 
             lblUcret.AutoSize = true;
+            lblUcret.BackColor = SystemColors.ActiveCaptionText;
+            lblUcret.ForeColor = SystemColors.ButtonHighlight;
             lblUcret.Location = new Point(26, 579);
             lblUcret.Name = "lblUcret";
             lblUcret.Size = new Size(44, 20);
@@ -145,6 +154,8 @@
             // lblYayinTarihi
             // 
             lblYayinTarihi.AutoSize = true;
+            lblYayinTarihi.BackColor = SystemColors.ActiveCaptionText;
+            lblYayinTarihi.ForeColor = SystemColors.ButtonHighlight;
             lblYayinTarihi.Location = new Point(26, 545);
             lblYayinTarihi.Name = "lblYayinTarihi";
             lblYayinTarihi.Size = new Size(82, 20);
@@ -154,6 +165,8 @@
             // lblAd
             // 
             lblAd.AutoSize = true;
+            lblAd.BackColor = SystemColors.ActiveCaptionText;
+            lblAd.ForeColor = SystemColors.ButtonHighlight;
             lblAd.Location = new Point(26, 508);
             lblAd.Name = "lblAd";
             lblAd.Size = new Size(28, 20);
@@ -171,6 +184,8 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = SystemColors.ActiveCaptionText;
+            label5.ForeColor = SystemColors.ButtonHighlight;
             label5.Location = new Point(661, 288);
             label5.Name = "label5";
             label5.Size = new Size(64, 20);
@@ -180,6 +195,8 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = SystemColors.ActiveCaptionText;
+            label4.ForeColor = SystemColors.ButtonHighlight;
             label4.Location = new Point(447, 288);
             label4.Name = "label4";
             label4.Size = new Size(113, 20);
@@ -189,6 +206,8 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.ActiveCaptionText;
+            label3.ForeColor = SystemColors.ButtonHighlight;
             label3.Location = new Point(223, 289);
             label3.Name = "label3";
             label3.Size = new Size(194, 20);
@@ -198,6 +217,8 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.ActiveCaptionText;
+            label2.ForeColor = SystemColors.ButtonHighlight;
             label2.Location = new Point(19, 289);
             label2.Name = "label2";
             label2.Size = new Size(176, 20);
@@ -289,47 +310,61 @@
             // 
             // btnAlbumGuncelle
             // 
-            btnAlbumGuncelle.Location = new Point(733, 598);
+            btnAlbumGuncelle.BackColor = SystemColors.ActiveCaptionText;
+            btnAlbumGuncelle.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAlbumGuncelle.ForeColor = SystemColors.ButtonHighlight;
+            btnAlbumGuncelle.Location = new Point(704, 598);
             btnAlbumGuncelle.Margin = new Padding(3, 4, 3, 4);
             btnAlbumGuncelle.Name = "btnAlbumGuncelle";
-            btnAlbumGuncelle.Size = new Size(118, 30);
+            btnAlbumGuncelle.Size = new Size(147, 30);
             btnAlbumGuncelle.TabIndex = 54;
             btnAlbumGuncelle.Text = "Albüm Güncelle";
-            btnAlbumGuncelle.UseVisualStyleBackColor = true;
+            btnAlbumGuncelle.UseVisualStyleBackColor = false;
             // 
             // btnAlbumKaydet
             // 
-            btnAlbumKaydet.Location = new Point(733, 560);
+            btnAlbumKaydet.BackColor = SystemColors.ActiveCaptionText;
+            btnAlbumKaydet.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAlbumKaydet.ForeColor = SystemColors.ButtonHighlight;
+            btnAlbumKaydet.Location = new Point(704, 560);
             btnAlbumKaydet.Margin = new Padding(3, 4, 3, 4);
             btnAlbumKaydet.Name = "btnAlbumKaydet";
-            btnAlbumKaydet.Size = new Size(118, 30);
+            btnAlbumKaydet.Size = new Size(147, 30);
             btnAlbumKaydet.TabIndex = 53;
             btnAlbumKaydet.Text = "Albüm Kaydet";
-            btnAlbumKaydet.UseVisualStyleBackColor = true;
+            btnAlbumKaydet.UseVisualStyleBackColor = false;
             // 
             // btnAlbumSil
             // 
-            btnAlbumSil.Location = new Point(733, 522);
+            btnAlbumSil.BackColor = SystemColors.ActiveCaptionText;
+            btnAlbumSil.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAlbumSil.ForeColor = SystemColors.ButtonHighlight;
+            btnAlbumSil.Location = new Point(704, 522);
             btnAlbumSil.Margin = new Padding(3, 4, 3, 4);
             btnAlbumSil.Name = "btnAlbumSil";
-            btnAlbumSil.Size = new Size(118, 30);
+            btnAlbumSil.Size = new Size(147, 30);
             btnAlbumSil.TabIndex = 52;
             btnAlbumSil.Text = "Albüm Sil";
-            btnAlbumSil.UseVisualStyleBackColor = true;
+            btnAlbumSil.UseVisualStyleBackColor = false;
             // 
             // btnYeniAlbum
             // 
-            btnYeniAlbum.Location = new Point(733, 484);
+            btnYeniAlbum.BackColor = SystemColors.ActiveCaptionText;
+            btnYeniAlbum.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnYeniAlbum.ForeColor = SystemColors.ButtonHighlight;
+            btnYeniAlbum.Location = new Point(704, 484);
             btnYeniAlbum.Margin = new Padding(3, 4, 3, 4);
             btnYeniAlbum.Name = "btnYeniAlbum";
-            btnYeniAlbum.Size = new Size(118, 30);
+            btnYeniAlbum.Size = new Size(147, 30);
             btnYeniAlbum.TabIndex = 51;
             btnYeniAlbum.Text = "Yeni Albüm";
-            btnYeniAlbum.UseVisualStyleBackColor = true;
+            btnYeniAlbum.UseVisualStyleBackColor = false;
             // 
             // lblDetay
             // 
             lblDetay.AutoSize = true;
+            lblDetay.BackColor = SystemColors.ActiveCaptionText;
+            lblDetay.ForeColor = SystemColors.ButtonHighlight;
             lblDetay.Location = new Point(19, 7);
             lblDetay.Name = "lblDetay";
             lblDetay.Size = new Size(48, 20);
@@ -339,6 +374,8 @@
             // linklblSifreDegistir
             // 
             linklblSifreDegistir.AutoSize = true;
+            linklblSifreDegistir.BackColor = SystemColors.ActiveCaptionText;
+            linklblSifreDegistir.LinkColor = Color.Red;
             linklblSifreDegistir.Location = new Point(743, 648);
             linklblSifreDegistir.Name = "linklblSifreDegistir";
             linklblSifreDegistir.Size = new Size(95, 20);
@@ -350,6 +387,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(882, 680);
             Controls.Add(cbDurum);
             Controls.Add(numUcret);
