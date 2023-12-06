@@ -31,18 +31,22 @@ namespace Plak.UI
         {
             try
             {
+                if ((txtKullaniciAdi.Text == null || txtKullaniciAdi.Text == string.Empty) && (txtSifre.Text == null || txtSifre.Text == string.Empty))
+                {
+                    throw new Exception("Alanlar boş bırakılamaz.");
+                }
                 User user = userService.UserLogin(txtKullaniciAdi.Text, txtSifre.Text);
                 if (user != null)
                 {
                     MessageBox.Show("Giriş başarılı.");
                 }
             }
-            catch (Exception ex)  
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
-            
+
+
         }
 
         private void LoginScreen_Load(object sender, EventArgs e)
