@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plak.BLL.Services;
+using Plak.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,43 @@ namespace Plak.UI
 
         private void Signin_Load(object sender, EventArgs e)
         {
-            
+            service = new UserService();
+        }
+
+        UserService service;
+
+        private void btnKaydol_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (service.CheckUsernameExists(txtBoxKullaniciKayit.Text))
+                {
+                    throw new Exception("Kullanıcı zaten mevcut.");
+                }
+
+                if (txtBoxSifreKayit.Text != txtBoxSifreTekrar.Text)
+                {
+                    throw new Exception("Şifreler uyuşmuyor.");
+                }
+                User user = new User();
+                user.Username = txtBoxKullaniciKayit.Text;
+                user.FirstName = txtBoxIsim.Text;
+                user.LastName = txtBoxSoyisim.Text;
+                user.Password = txtBoxSifreKayit.Text;
+                user.UserType = Domain.Enums.UserType.Standard;
+                service.AddStandardUser(user);
+
+                MessageBox.Show("Kayıt başarılı.");
+
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
     }
 }
