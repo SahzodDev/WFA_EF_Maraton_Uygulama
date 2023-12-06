@@ -112,6 +112,7 @@
             btnKaydol.TabIndex = 8;
             btnKaydol.Text = "Kayıt Ol";
             btnKaydol.UseVisualStyleBackColor = false;
+            btnKaydol.Click += btnKaydol_Click;
             // 
             // txtBoxSifreKayit
             // 
@@ -119,6 +120,7 @@
             txtBoxSifreKayit.Location = new Point(127, 158);
             txtBoxSifreKayit.Margin = new Padding(3, 2, 3, 2);
             txtBoxSifreKayit.Name = "txtBoxSifreKayit";
+            txtBoxSifreKayit.PasswordChar = '*';
             txtBoxSifreKayit.Size = new Size(140, 23);
             txtBoxSifreKayit.TabIndex = 9;
             // 
@@ -128,6 +130,7 @@
             txtBoxSifreTekrar.Location = new Point(127, 200);
             txtBoxSifreTekrar.Margin = new Padding(3, 2, 3, 2);
             txtBoxSifreTekrar.Name = "txtBoxSifreTekrar";
+            txtBoxSifreTekrar.PasswordChar = '*';
             txtBoxSifreTekrar.Size = new Size(140, 23);
             txtBoxSifreTekrar.TabIndex = 10;
             // 
