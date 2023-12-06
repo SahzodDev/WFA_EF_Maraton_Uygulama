@@ -49,21 +49,22 @@
             lbEklenen10 = new ListBox();
             lbSatisDevam = new ListBox();
             lbSatisDurduruldu = new ListBox();
-            lvDetails = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
-            columnHeader5 = new ColumnHeader();
-            columnHeader6 = new ColumnHeader();
             btnAlbumGuncelle = new Button();
             btnAlbumKaydet = new Button();
             btnAlbumSil = new Button();
             btnYeniAlbum = new Button();
             lblDetay = new Label();
             linklblSifreDegistir = new LinkLabel();
+            dgvAlbumler = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            İndirim = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)numUcret).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numIndirim).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlbumler).BeginInit();
             SuspendLayout();
             // 
             // cbDurum
@@ -265,49 +266,6 @@
             lbSatisDurduruldu.Size = new Size(185, 144);
             lbSatisDurduruldu.TabIndex = 56;
             // 
-            // lvDetails
-            // 
-            lvDetails.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
-            lvDetails.FullRowSelect = true;
-            lvDetails.GridLines = true;
-            lvDetails.Location = new Point(19, 31);
-            lvDetails.Margin = new Padding(3, 4, 3, 4);
-            lvDetails.Name = "lvDetails";
-            lvDetails.Size = new Size(832, 237);
-            lvDetails.TabIndex = 55;
-            lvDetails.UseCompatibleStateImageBehavior = false;
-            lvDetails.View = View.Details;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Ad";
-            columnHeader1.Width = 110;
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Artist/Grup";
-            columnHeader2.Width = 110;
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Yayın Tarihi";
-            columnHeader3.Width = 100;
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "Ücret";
-            columnHeader4.Width = 110;
-            // 
-            // columnHeader5
-            // 
-            columnHeader5.Text = "İndirim";
-            columnHeader5.Width = 110;
-            // 
-            // columnHeader6
-            // 
-            columnHeader6.Text = "Satış Durumu";
-            columnHeader6.Width = 110;
-            // 
             // btnAlbumGuncelle
             // 
             btnAlbumGuncelle.BackColor = SystemColors.ActiveCaptionText;
@@ -383,12 +341,66 @@
             linklblSifreDegistir.TabStop = true;
             linklblSifreDegistir.Text = "Şifre Değiştir";
             // 
+            // dgvAlbumler
+            // 
+            dgvAlbumler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlbumler.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, İndirim, Column5 });
+            dgvAlbumler.Location = new Point(6, 30);
+            dgvAlbumler.Name = "dgvAlbumler";
+            dgvAlbumler.RowHeadersWidth = 51;
+            dgvAlbumler.RowTemplate.Height = 29;
+            dgvAlbumler.Size = new Size(845, 261);
+            dgvAlbumler.TabIndex = 76;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Albüm Adı";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Albüm Sanatçısı/ Grubu";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Çıkış Tarihi";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Fiyat";
+            Column4.MinimumWidth = 6;
+            Column4.Name = "Column4";
+            Column4.Width = 125;
+            // 
+            // İndirim
+            // 
+            İndirim.HeaderText = "İndirim Oranı";
+            İndirim.MinimumWidth = 6;
+            İndirim.Name = "İndirim";
+            İndirim.Width = 125;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Satış Durumu";
+            Column5.MinimumWidth = 6;
+            Column5.Name = "Column5";
+            Column5.Width = 125;
+            // 
             // MainScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(882, 680);
+            Controls.Add(dgvAlbumler);
             Controls.Add(cbDurum);
             Controls.Add(numUcret);
             Controls.Add(numIndirim);
@@ -409,7 +421,6 @@
             Controls.Add(lbEklenen10);
             Controls.Add(lbSatisDevam);
             Controls.Add(lbSatisDurduruldu);
-            Controls.Add(lvDetails);
             Controls.Add(btnAlbumGuncelle);
             Controls.Add(btnAlbumKaydet);
             Controls.Add(btnAlbumSil);
@@ -421,6 +432,7 @@
             Load += MainScreen_Load;
             ((System.ComponentModel.ISupportInitialize)numUcret).EndInit();
             ((System.ComponentModel.ISupportInitialize)numIndirim).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlbumler).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -447,18 +459,18 @@
         private ListBox lbEklenen10;
         private ListBox lbSatisDevam;
         private ListBox lbSatisDurduruldu;
-        private ListView lvDetails;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
         private Button btnAlbumGuncelle;
         private Button btnAlbumKaydet;
         private Button btnAlbumSil;
         private Button btnYeniAlbum;
         private Label lblDetay;
         private LinkLabel linklblSifreDegistir;
+        private DataGridView dgvAlbumler;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn İndirim;
+        private DataGridViewTextBoxColumn Column5;
     }
 }
