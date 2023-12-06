@@ -19,4 +19,8 @@
     <ProjectReference Include="..\Plak.Domain\Plak.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
