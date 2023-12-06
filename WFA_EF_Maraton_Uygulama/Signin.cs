@@ -16,5 +16,10 @@ namespace Plak.UI
         {
             InitializeComponent();
         }
+
+        private void Signin_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

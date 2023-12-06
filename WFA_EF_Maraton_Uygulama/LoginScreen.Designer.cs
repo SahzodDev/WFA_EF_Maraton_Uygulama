@@ -39,18 +39,16 @@
             // 
             // txtSifre
             // 
-            txtSifre.Location = new Point(147, 110);
-            txtSifre.Margin = new Padding(3, 4, 3, 4);
+            txtSifre.Location = new Point(129, 82);
             txtSifre.Name = "txtSifre";
-            txtSifre.Size = new Size(202, 27);
+            txtSifre.Size = new Size(177, 23);
             txtSifre.TabIndex = 19;
             // 
             // txtKullaniciAdi
             // 
-            txtKullaniciAdi.Location = new Point(147, 36);
-            txtKullaniciAdi.Margin = new Padding(3, 4, 3, 4);
+            txtKullaniciAdi.Location = new Point(129, 27);
             txtKullaniciAdi.Name = "txtKullaniciAdi";
-            txtKullaniciAdi.Size = new Size(202, 27);
+            txtKullaniciAdi.Size = new Size(177, 23);
             txtKullaniciAdi.TabIndex = 18;
             // 
             // btnGirisYap
@@ -58,10 +56,9 @@
             btnGirisYap.BackColor = SystemColors.ActiveCaptionText;
             btnGirisYap.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnGirisYap.ForeColor = SystemColors.ButtonHighlight;
-            btnGirisYap.Location = new Point(215, 190);
-            btnGirisYap.Margin = new Padding(3, 4, 3, 4);
+            btnGirisYap.Location = new Point(188, 142);
             btnGirisYap.Name = "btnGirisYap";
-            btnGirisYap.Size = new Size(134, 39);
+            btnGirisYap.Size = new Size(117, 29);
             btnGirisYap.TabIndex = 17;
             btnGirisYap.Text = "Giris Yap";
             btnGirisYap.UseVisualStyleBackColor = false;
@@ -71,21 +68,22 @@
             linklblKayitOl.AutoSize = true;
             linklblKayitOl.BackColor = SystemColors.ActiveCaptionText;
             linklblKayitOl.LinkColor = Color.Red;
-            linklblKayitOl.Location = new Point(281, 254);
+            linklblKayitOl.Location = new Point(246, 190);
             linklblKayitOl.Name = "linklblKayitOl";
-            linklblKayitOl.Size = new Size(61, 20);
+            linklblKayitOl.Size = new Size(48, 15);
             linklblKayitOl.TabIndex = 16;
             linklblKayitOl.TabStop = true;
             linklblKayitOl.Text = "Kayıt Ol";
+            linklblKayitOl.LinkClicked += linklblKayitOl_LinkClicked;
             // 
             // lblSifre
             // 
             lblSifre.AutoSize = true;
             lblSifre.BackColor = SystemColors.ActiveCaptionText;
             lblSifre.ForeColor = SystemColors.ButtonHighlight;
-            lblSifre.Location = new Point(38, 114);
+            lblSifre.Location = new Point(33, 86);
             lblSifre.Name = "lblSifre";
-            lblSifre.Size = new Size(42, 20);
+            lblSifre.Size = new Size(33, 15);
             lblSifre.TabIndex = 15;
             lblSifre.Text = "Şifre:";
             // 
@@ -94,25 +92,26 @@
             lblKullaniciAdi.AutoSize = true;
             lblKullaniciAdi.BackColor = SystemColors.ActiveCaptionText;
             lblKullaniciAdi.ForeColor = SystemColors.ButtonHighlight;
-            lblKullaniciAdi.Location = new Point(38, 40);
+            lblKullaniciAdi.Location = new Point(33, 30);
             lblKullaniciAdi.Name = "lblKullaniciAdi";
-            lblKullaniciAdi.Size = new Size(99, 20);
+            lblKullaniciAdi.Size = new Size(79, 15);
             lblKullaniciAdi.TabIndex = 14;
             lblKullaniciAdi.Text = "Kullanıcı Adı :";
             // 
             // LoginScreen
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(393, 344);
+            ClientSize = new Size(344, 258);
             Controls.Add(txtSifre);
             Controls.Add(txtKullaniciAdi);
             Controls.Add(btnGirisYap);
             Controls.Add(linklblKayitOl);
             Controls.Add(lblSifre);
             Controls.Add(lblKullaniciAdi);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "LoginScreen";
             Text = "LoginScreen";
             ResumeLayout(false);
