@@ -280,6 +280,7 @@
             btnAlbumKaydet.TabIndex = 53;
             btnAlbumKaydet.Text = "Albüm Kaydet";
             btnAlbumKaydet.UseVisualStyleBackColor = false;
+            btnAlbumKaydet.Click += btnAlbumKaydet_Click;
             // 
             // btnAlbumSil
             // 
@@ -292,6 +293,7 @@
             btnAlbumSil.TabIndex = 52;
             btnAlbumSil.Text = "Albüm Sil";
             btnAlbumSil.UseVisualStyleBackColor = false;
+            btnAlbumSil.Click += btnAlbumSil_Click;
             // 
             // btnYeniAlbum
             // 
@@ -304,6 +306,7 @@
             btnYeniAlbum.TabIndex = 51;
             btnYeniAlbum.Text = "Yeni Albüm";
             btnYeniAlbum.UseVisualStyleBackColor = false;
+            btnYeniAlbum.Click += btnYeniAlbum_Click;
             // 
             // lblDetay
             // 

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,6 +51,9 @@ namespace Plak.UI
             {
                 lbIndirimli.Items.Add(album3);
             }
+
+            
+
 
 
 
@@ -103,7 +107,42 @@ namespace Plak.UI
 
             this.Hide();
             changePassword.ShowDialog();
-            this.Show();    
+            this.Show();
         }
+
+        private void btnAlbumSil_Click(object sender, EventArgs e)
+        {
+            Album album = albumService.GetAll().FirstOrDefault(x => x.AlbumName == txtAd.Text);
+
+            albumService.DeleteByStatus(album.Id);
+        }
+
+        private void btnAlbumKaydet_Click(object sender, EventArgs e)
+        {
+            Album album = albumService.GetAll().FirstOrDefault(x => x.AlbumName == txtAd.Text);
+            album.AlbumName = txtAd.Text;
+            album.ReleaseDate = dtpYayinTarihi.Value;
+            album.Price = numUcret.Value;
+            album.Discount = numIndirim.Value;
+            album.ArtistName = txtArtistGrup.Text;
+            albumService.Update(album);
+           
+        }
+
+        private void btnYeniAlbum_Click(object sender, EventArgs e)
+        {
+            Album album = new Album()
+            {
+                AlbumName = txtAd.Text,
+                ReleaseDate = dtpYayinTarihi.Value,
+                Price = numUcret.Value,
+                Discount = numIndirim.Value
+
+            };
+
+            albumService.Add(album);
+        }
+
+        
     }
 }
