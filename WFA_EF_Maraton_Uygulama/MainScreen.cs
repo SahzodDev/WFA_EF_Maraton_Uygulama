@@ -54,7 +54,7 @@ namespace Plak.UI
 
             
 
-
+            cbDurum.DataSource = Enum.GetValues(typeof(Domain.Enums.SalesState));
 
 
         }
@@ -125,6 +125,7 @@ namespace Plak.UI
             album.Price = numUcret.Value;
             album.Discount = numIndirim.Value;
             album.ArtistName = txtArtistGrup.Text;
+            album.SalesState = (Domain.Enums.SalesState)cbDurum.SelectedItem;
             albumService.Update(album);
            
         }
