@@ -278,6 +278,7 @@
             btnAlbumGuncelle.TabIndex = 54;
             btnAlbumGuncelle.Text = "Albüm Güncelle";
             btnAlbumGuncelle.UseVisualStyleBackColor = false;
+            btnAlbumGuncelle.Click += btnAlbumGuncelle_Click;
             // 
             // btnAlbumKaydet
             // 
@@ -304,6 +305,7 @@
             btnAlbumSil.TabIndex = 52;
             btnAlbumSil.Text = "Albüm Sil";
             btnAlbumSil.UseVisualStyleBackColor = false;
+            btnAlbumSil.Click += btnAlbumSil_Click;
             // 
             // btnYeniAlbum
             // 
@@ -351,6 +353,7 @@
             dgvAlbumler.RowTemplate.Height = 29;
             dgvAlbumler.Size = new Size(845, 261);
             dgvAlbumler.TabIndex = 76;
+            dgvAlbumler.CellClick += dgvAlbumler_CellClick;
             // 
             // Column1
             // 
