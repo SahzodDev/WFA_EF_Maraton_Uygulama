@@ -48,7 +48,7 @@ namespace Plak.UI
             var indirimliler=albumService.GetAlbumsOnDiscount();
             foreach (Album album3 in indirimliler)
             {
-                
+                lbIndirimli.Items.Add(album3);
             }
                
 
