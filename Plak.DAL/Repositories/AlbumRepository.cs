@@ -47,10 +47,12 @@ namespace Plak.DAL.Repositories
             dbContext.SaveChanges();
         }
 
-        public List <Album> GetAll()
+        public List <Album> GetAllAlbums()
         {
-            return dbContext.Albums.ToList();
+            return dbContext.Albums.Where(x=>x.Status!=Domain.Enums.Status.Deleted).ToList();
         }
+
+
         
     }
 
