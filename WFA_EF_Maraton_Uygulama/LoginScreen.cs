@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plak.BLL.Services;
+using Plak.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +25,29 @@ namespace Plak.UI
             this.Hide();
             signin.ShowDialog();
             this.Show();
+        }
+        UserService userService;
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                User user = userService.UserLogin(txtKullaniciAdi.Text, txtSifre.Text);
+                if (user != null)
+                {
+                    MessageBox.Show("Giriş başarılı.");
+                }
+            }
+            catch (Exception ex)  
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            
+        }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+            userService = new UserService();
         }
     }
 }

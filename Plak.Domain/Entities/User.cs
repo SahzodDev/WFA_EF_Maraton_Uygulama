@@ -15,23 +15,7 @@ namespace Plak.Domain.Entities
             Salt = (string?)GenerateSalt();
         }
 
-        private object GenerateSalt()
-        {
-            byte[] randomBytes = new byte[32];
-            using (var rng = RandomNumberGenerator.Create())
-            {
-                rng.GetBytes(randomBytes);
-            }
-            return Convert.ToBase64String(randomBytes);
-        }
-
-        private string _salt;
-
-        public string? Salt
-        {
-            get { return _salt; }
-            set { _salt = value; }
-        }
+        
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -88,6 +72,24 @@ namespace Plak.Domain.Entities
         public bool VerifyPassword(string password)
         {
             return HashPassword(password) == _hashedPassword;
+        }
+
+        private object GenerateSalt()
+        {
+            byte[] randomBytes = new byte[32];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomBytes);
+            }
+            return Convert.ToBase64String(randomBytes);
+        }
+
+        private string _salt;
+
+        public string? Salt
+        {
+            get { return _salt; }
+            set { _salt = value; }
         }
 
         public void ChangePassword(string password)
