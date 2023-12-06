@@ -16,5 +16,13 @@ namespace Plak.UI
         {
             InitializeComponent();
         }
+
+        private void linklblKayitOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Signin signin = new Signin();
+            this.Hide();
+            signin.ShowDialog();
+            this.Show();
+        }
     }
 }
