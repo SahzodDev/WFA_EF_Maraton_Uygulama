@@ -18,8 +18,8 @@ namespace Plak.UI
         public MainScreen(User user)
         {
             InitializeComponent();
-            albumService=new AlbumService();
-            artistService=new ArtistService();
+            albumService = new AlbumService();
+            artistService = new ArtistService();
             this.user = user;
         }
         AlbumService albumService;
@@ -35,37 +35,45 @@ namespace Plak.UI
             {
                 lbSatisDurduruldu.Items.Add(album);
             }
-            var satisdevamedenler=albumService.GetAlbumsWhereSalesContinue();
+            var satisdevamedenler = albumService.GetAlbumsWhereSalesContinue();
             foreach (Album album1 in satisdevamedenler)
             {
                 lbSatisDevam.Items.Add(album1);
             }
             var soneklenenler = albumService.GetLatestTenAlbum();
-            foreach(Album album2 in soneklenenler)
+            foreach (Album album2 in soneklenenler)
             {
                 lbEklenen10.Items.Add(album2);
             }
-            var indirimliler=albumService.GetAlbumsOnDiscount();
+            var indirimliler = albumService.GetAlbumsOnDiscount();
             foreach (Album album3 in indirimliler)
             {
-                
+
             }
-               
+
 
 
         }
 
         public void GetAllData()
         {
-            List <Artist> artists= new List <Artist>();
+            List<Artist> artists = new List<Artist>();
 
-            
-            var albumler=albumService.GetAll();
+
+            var albumler = albumService.GetAll();
             foreach (var album in albumler)
             {
-                dgvAlbumler.Rows.Add(album.AlbumName, album.ArtistName, album.ReleaseDate,album.Price,album.SalesState);
+                dgvAlbumler.Rows.Add(album.AlbumName, album.ArtistName, album.ReleaseDate, album.Price, album.SalesState);
             }
         }
-       
+
+        private void linklblSifreDegistir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword(user);
+            this.Hide();
+            changePassword.ShowDialog();
+            this.Show();
+
+        }
     }
 }

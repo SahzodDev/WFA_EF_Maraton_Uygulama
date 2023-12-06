@@ -39,7 +39,14 @@ namespace Plak.UI
                 if (user != null)
                 {
                     MessageBox.Show("Giriş başarılı.");
+                    MainScreen mainScreen = new MainScreen(user);
+                    this.Hide();
+                    mainScreen.ShowDialog();
+                    this.Show();
                 }
+
+                
+
             }
             catch (Exception ex)
             {

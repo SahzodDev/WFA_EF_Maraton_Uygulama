@@ -90,6 +90,7 @@
             txtBoxEskiSifre.Location = new Point(140, 56);
             txtBoxEskiSifre.Margin = new Padding(3, 2, 3, 2);
             txtBoxEskiSifre.Name = "txtBoxEskiSifre";
+            txtBoxEskiSifre.PasswordChar = '*';
             txtBoxEskiSifre.Size = new Size(152, 23);
             txtBoxEskiSifre.TabIndex = 4;
             // 
@@ -98,6 +99,7 @@
             txtBoxYeniSifre.Location = new Point(140, 100);
             txtBoxYeniSifre.Margin = new Padding(3, 2, 3, 2);
             txtBoxYeniSifre.Name = "txtBoxYeniSifre";
+            txtBoxYeniSifre.PasswordChar = '*';
             txtBoxYeniSifre.Size = new Size(152, 23);
             txtBoxYeniSifre.TabIndex = 5;
             // 
@@ -106,6 +108,7 @@
             txtBoxYeniSifreTekrar.Location = new Point(140, 143);
             txtBoxYeniSifreTekrar.Margin = new Padding(3, 2, 3, 2);
             txtBoxYeniSifreTekrar.Name = "txtBoxYeniSifreTekrar";
+            txtBoxYeniSifreTekrar.PasswordChar = '*';
             txtBoxYeniSifreTekrar.Size = new Size(152, 23);
             txtBoxYeniSifreTekrar.TabIndex = 6;
             // 
