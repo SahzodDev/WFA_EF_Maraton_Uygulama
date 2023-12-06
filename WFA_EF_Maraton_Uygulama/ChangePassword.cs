@@ -36,16 +36,19 @@ namespace Plak.UI
             try
             {
                 CheckBoxes();
+                if (!userService.CheckPassword(txtBoxEskiSifre.Text, user))
+                {
+                    throw new Exception("Eski şifre yanlış.");
+                }
                 if (txtBoxYeniSifre.Text != txtBoxYeniSifreTekrar.Text)
                 {
                     throw new Exception("Yeni şifreler uyuşmuyor.");
                 }
-                if (userService.CheckPassword(txtBoxEskiSifre.Text, user))
-                {
-                    throw new Exception("Eski şifre yanlış.");
-                }
+                
 
                 userService.PasswordChange(txtBoxYeniSifre.Text, user);
+                MessageBox.Show("Şifre başarıyla değişti.");
+                this.Close();
 
             }
             catch(Exception ex)  

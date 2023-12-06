@@ -97,6 +97,13 @@ namespace Plak.UI
 
         }
 
-        
+        private void linklblSifreDegistir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword(user);
+
+            this.Hide();
+            changePassword.ShowDialog();
+            this.Show();    
+        }
     }
 }
