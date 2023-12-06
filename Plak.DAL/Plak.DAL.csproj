@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Plak.Domain\Plak.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
