@@ -62,6 +62,7 @@
             btnGirisYap.TabIndex = 17;
             btnGirisYap.Text = "Giris Yap";
             btnGirisYap.UseVisualStyleBackColor = false;
+            btnGirisYap.Click += btnGirisYap_Click;
             // 
             // linklblKayitOl
             // 
@@ -114,6 +115,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginScreen";
             Text = "LoginScreen";
+            Load += LoginScreen_Load;
             ResumeLayout(false);
             PerformLayout();
         }
