@@ -306,7 +306,7 @@
             btnAlbumSil.TabIndex = 52;
             btnAlbumSil.Text = "Albüm Sil";
             btnAlbumSil.UseVisualStyleBackColor = false;
-            btnAlbumSil.Click += btnAlbumSil_Click;
+           
             // 
             // btnYeniAlbum
             // 
